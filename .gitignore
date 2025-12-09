@@ -1,0 +1,53 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# ------------------------
+# Python
+# ------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.log
+*.sqlite3
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MyPy / type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ------------------------
+# PyCharm / JetBrains
+# ------------------------
+# Ignore PyCharm project settings
+.idea/
+
+# ------------------------
+# OS Files
+# ------------------------
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
