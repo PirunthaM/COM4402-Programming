@@ -1,0 +1,48 @@
+Start
+    INPUT score
+
+    IF score >= 70
+        OUTPUT "Distinction"
+
+    ELSE IF score > 40 AND score < 69
+        OUTPUT "Pass"
+
+    ELSE IF score < 40
+        OUTPUT "FAIL"
+
+    ENDIF
+End
+
+
+
+
+
+
+
+
+
+
+
+
+Start
+    OUTPUT "menu options:
+            1 Add item
+            2 Delete item
+            3 Exit"
+
+    INPUT choice
+
+    IF choice = 1
+        OUTPUT "Add item"
+
+    ELSE IF choice = 2
+        OUTPUT "Delete item"
+
+    ELSE IF choice = 3
+        OUTPUT "Exit program"
+
+END
+
+
+
+
