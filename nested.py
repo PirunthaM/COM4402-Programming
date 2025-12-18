@@ -1,13 +1,13 @@
 from idlelib.sidebar import EndLineDelegator
+age = int(input("Please enter your age "))
 
-score = int(input("Input score please"))
-
-if score >= 40:
-    if score >= 70:
-        print("Pass with merit")
-    else:
-        print("Pass")
-else:
-    print("Fail")
+if age < 5:
+    print ("Free entry")
+elif age > 5 and age < 18:
+    print("Child ticket")
+elif (age > 17 and age < 65):
+    print("Adult ticket")
+elif age > 65:
+    print("Senior ticket")
 
 
