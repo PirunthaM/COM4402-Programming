@@ -1,4 +1,4 @@
-command: input("choose a command create, read, update, delete, list: ")
+command = input("choose a command create, read, update, delete, list: ")
 
 match command.strip().lower():
     case "create":
