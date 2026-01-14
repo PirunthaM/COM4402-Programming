@@ -21,3 +21,6 @@ answers = [3, 1, 1, 1, 2]
 
 print("Hello, the quiz will now begin...")
 
+for i in range(len(questions)):
+
+
