@@ -22,5 +22,8 @@ answers = [3, 1, 1, 1, 2]
 print("Hello, the quiz will now begin...")
 
 for i in range(len(questions)):
-
     print(questions[i])
+    for option in options[i]:
+        print(option)
+
+guess = input("Please choose your answer between 1-4...")
