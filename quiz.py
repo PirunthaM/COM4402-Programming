@@ -27,3 +27,14 @@ for i in range(len(questions)):
         print(option)
 
 guess = input("Please choose your answer between 1-4...")
+
+if guess == answers[i]:
+    print("Correct!")
+    score = score + 1
+
+else:
+    print("Incorrect")
+
+print("Your final score is ", score)
+percentage = ((score / total_questions) * 100)
+print("Your percentage is ", percentage, "%")
