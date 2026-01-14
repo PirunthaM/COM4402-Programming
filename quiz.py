@@ -23,3 +23,4 @@ print("Hello, the quiz will now begin...")
 
 for i in range(len(questions)):
 
+    print(questions[i])
