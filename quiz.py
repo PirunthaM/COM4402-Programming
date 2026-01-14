@@ -26,7 +26,7 @@ for i in range(len(questions)):
     for option in options[i]:
         print(option)
 
-    guess = input("Please choose your answer between 1-4...")
+    guess = int(input("Please choose your answer between 1-4..."))
 
     if guess == answers[i]:
         print("Correct!")
