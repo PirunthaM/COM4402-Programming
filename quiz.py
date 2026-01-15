@@ -28,8 +28,8 @@ for question in range(len(questions)):
 
     guess = int(input("Please choose your answer between 1-4..."))
 
-    while guess < 1 and > 4:
-        print("Please enter a number between 1 and 4")
+    while guess < 1 or guess > 4:
+        print("invalid")
         guess = int(input("Please choose your answer between 1-4..."))
 
     if guess == answers[question]:
