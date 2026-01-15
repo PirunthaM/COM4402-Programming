@@ -21,14 +21,17 @@ answers = [3, 1, 1, 1, 2]
 
 print("Hello, the quiz will now begin...")
 
-for i in range(len(questions)):
-    print(questions[i])
-    for option in options[i]:
+for question in range(len(questions)):
+    print(questions[question])
+    for option in options[question]:
         print(option)
 
     guess = int(input("Please choose your answer between 1-4..."))
 
-    if guess == answers[i]:
+    while guess <= 1 and >= 4:
+        print("Please enter a number between 1 and 4")
+
+    if guess == answers[question]:
         print("Correct!")
         score = score + 1
 
