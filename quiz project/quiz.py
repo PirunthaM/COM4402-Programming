@@ -10,16 +10,7 @@ print("Hello, the quiz will now begin...")
 score = 0
 total_questions = 5
 
-def run_quiz():
-
-    for question in quiz:
-        print(question["question"])
-        for option in question["options"]:
-            print(option)
-        print("Option 5) quit the quiz.")
-
-
-def check_valid_answer():
+def check_valid_answer(question):
     guess = int(input("Please choose your answer between 1-4..."))
     while guess < 1 or guess > 4:
         print("invalid")
@@ -35,8 +26,18 @@ def check_valid_answer():
     else:
         print("Incorrect")
 
+def run_quiz():
+
+    for question in quiz:
+        print(question["question"])
+        for option in question["options"]:
+            print(option)
+        print("5) quit the quiz.")
+
+        check_valid_answer(question)
+
 run_quiz()
-check_valid_answer()
+
 
 print("Thank you! Quiz complete...")
 print("Your final score is ", score, "out of 5")
