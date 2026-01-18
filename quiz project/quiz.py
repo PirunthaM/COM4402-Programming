@@ -5,23 +5,26 @@ quiz = [
     {"question": "What is 25 % 5?", "options": ["1) 5", "2) 4", "3) 6", "4) 8"], "answer": 1},
     {"question": "What is 9 + 10?", "options": ["1) 18", "2) 19", "3) 20", "4) 21"], "answer": 2}
 ]
+
 print("Hello, the quiz will now begin...")
 
 score = 0
 total_questions = 5
 
-def check_valid_answer(question):
+def check_answer(question):
+    global score
     guess = int(input("Please choose your answer between 1-4..."))
-    while guess < 1 or guess > 4:
-        print("invalid")
-        guess = int(input("Please choose your answer between 1-4..."))
 
-    if guess == 5:
-        print("The quiz has ended due to no answer")
+    while (guess < 1 or guess > 4):
+            print("invalid")
+            guess = int(input("Please choose your answer between 1-4..."))
 
-    if guess == question["answer"]:
-        print("Correct!")
-        score = score + 1
+            if guess == 5:
+                print("The quiz has ended due to no answer")
+
+            if guess == question["answer"]:
+                print("Correct!")
+                score = score + 1
 
     else:
         print("Incorrect")
@@ -34,10 +37,9 @@ def run_quiz():
             print(option)
         print("5) quit the quiz.")
 
-        check_valid_answer(question)
+        check_answer(question)
 
 run_quiz()
-
 
 print("Thank you! Quiz complete...")
 print("Your final score is ", score, "out of 5")
