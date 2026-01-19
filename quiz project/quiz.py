@@ -13,18 +13,19 @@ total_questions = 5
 
 def check_answer(question):
     global score
+
     guess = int(input("Please choose your answer between 1-4..."))
 
-    while (guess < 1 or guess > 4):
-            print("invalid")
+    if guess < 1 or guess > 5:
+            print("Invalid")
             guess = int(input("Please choose your answer between 1-4..."))
 
-            if guess == 5:
-                print("The quiz has ended due to no answer")
+    elif guess == 5:
+        print("The quiz has ended due to no answer")
 
-            if guess == question["answer"]:
-                print("Correct!")
-                score = score + 1
+    if guess == question["answer"]:
+        print("Correct!")
+        score = score + 1
 
     else:
         print("Incorrect")
