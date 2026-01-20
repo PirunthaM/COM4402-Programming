@@ -11,13 +11,15 @@ quiz = [
 
 print("Hello, the quiz will now begin...")
 
-for question in range(len(quiz)):
-    print(quiz[question]["question"])
-    for option in quiz[question]["options"]:
-        print(option)
+def run_quiz():
+    for question in range(len(quiz)):
+        print(quiz[question]["question"])
+        for option in quiz[question]["options"]:
+            print(option)
 
     guess = int(input("Please choose your answer between 1-4..."))
 
+def check_guess():
     while guess < 1 or guess > 4:
         print("invalid")
         guess = int(input("Please choose your answer between 1-4..."))
