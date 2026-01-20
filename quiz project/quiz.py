@@ -15,14 +15,15 @@ def get_valid_input(i):
     global quiz
     guess = None
     valid = False
-    max_options = len(quiz[i]["options"])
+    max_options = len(quiz[i]["options"]) -1
+    quit = len(quiz[i]["options"])
 
     while valid is not True:
-        print(f"Please enter your input between 1-{max_options}: ")
+        print(f"Please enter your input between 1-{max_options} or 5 to quit:")
         try:
             guess = int(input())
 
-            if guess == len(options)
+            if guess == 5:
                 return "quit"
 
             if not 1 <= guess <= max_options:
@@ -42,6 +43,10 @@ def check_guess(i):
     if guess == quiz[i]["answer"]:
         print("Correct!")
         score = score + 1
+
+    if guess == "quit":
+        print("You have chosen to quit.")
+        exit()
 
     else:
         print("Incorrect")
