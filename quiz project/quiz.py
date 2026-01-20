@@ -11,7 +11,7 @@ total_questions = len(quiz)
 
 print("Hello, the quiz will now begin...")
 
-def check_guess(quiz):
+def check_guess():
     global score
     guess = int(input("Please choose your answer between 1-4..."))
     while guess < 1 or guess > 4:
