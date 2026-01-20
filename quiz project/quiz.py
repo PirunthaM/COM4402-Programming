@@ -16,7 +16,6 @@ def get_valid_input(i):
     guess = None
     valid = False
     max_options = len(quiz[i]["options"]) -1
-    quit = len(quiz[i]["options"])
 
     while valid is not True:
         print(f"Please enter your input between 1-{max_options} or 5 to quit:")
