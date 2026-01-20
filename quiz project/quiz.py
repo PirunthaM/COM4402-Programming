@@ -29,8 +29,8 @@ def check_guess(i):
 def run_quiz():
     for i in range(len(quiz)):
         print(quiz[i]["question"])
-        for option in quiz[i]["options"]:
-            print(option)
+        for j in quiz[i]["options"]:
+            print(j)
         check_guess(i)
 
 run_quiz()
