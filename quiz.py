@@ -1,5 +1,5 @@
 quiz = [
-    {"question": "What is 5 + 3?", "options": ["1) 6", "2) 15", "3) 8", "4) 10"], "answer": 3},
+    {"question": "What is 5 + 3?", "options": ["1) 6", "2) 15", "3) 8", "4) 12"], "answer": 3},
     {"question": "What is 12 - 4?", "options": ["1) 8", "2) 6", "3) 7", "4) 5"], "answer": 1},
     {"question": "What is 7 x 6?", "options": ["1) 42", "2) 36", "3) 48", "4) 56"], "answer": 1},
     {"question": "What is 25 % 5?", "options": ["1) 5", "2) 4", "3) 6", "4) 0"], "answer": 4},
