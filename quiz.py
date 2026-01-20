@@ -56,4 +56,3 @@ print("Thank you! Quiz complete...")
 print("Your final score is ", score, "out of 5")
 percentage = ((score / total_questions) * 100)
 print("Your percentage is ", percentage, "%")
-
