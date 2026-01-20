@@ -1,9 +1,9 @@
 quiz = [
-    {"question": "What is 5 + 3?", "options": ["1) 6", "2) 15", "3) 8", "4) 12", "5)quit"], "answer": 3},
-    {"question": "What is 12 - 4?", "options": ["1) 8", "2) 6", "3) 7", "4) 5", "5)quit"], "answer": 1},
-    {"question": "What is 7 x 6?", "options": ["1) 42", "2) 36", "3) 48", "4) 56", "5)quit"], "answer": 1},
-    {"question": "What is 25 % 5?", "options": ["1) 5", "2) 4", "3) 6", "4) 0", "5)quit"], "answer": 4},
-    {"question": "What is 9 + 10?", "options": ["1) 18", "2) 19", "3) 20", "4) 21", "5)quit"], "answer": 2}
+    {"question": "What is 5 + 3?", "options": ["1) 6", "2) 15", "3) 8", "4) 12"], "answer": 3},
+    {"question": "What is 12 - 4?", "options": ["1) 8", "2) 6", "3) 7", "4) 5"], "answer": 1},
+    {"question": "What is 7 x 6?", "options": ["1) 42", "2) 36", "3) 48", "4) 56"], "answer": 1},
+    {"question": "What is 25 % 5?", "options": ["1) 5", "2) 4", "3) 6", "4) 0"], "answer": 4},
+    {"question": "What is 9 + 10?", "options": ["1) 18", "2) 19", "3) 20", "4) 21"], "answer": 2}
 ]
 
 score = 0
@@ -15,15 +15,12 @@ def get_valid_input(i):
     global quiz
     guess = None
     valid = False
-    max_options = len(quiz[i]["options"]) -1
+    max_options = len(quiz[i]["options"])
 
     while valid is not True:
-        print(f"Please enter your input between 1-{max_options} or 5 to quit:")
+        print(f"Please enter your input between 1-{max_options} ")
         try:
             guess = int(input())
-
-            if guess == 5:
-                return "quit"
 
             if not 1 <= guess <= max_options:
                 print("Value not in range of 1 to 4. ")
@@ -42,10 +39,6 @@ def check_guess(i):
     if guess == quiz[i]["answer"]:
         print("Correct!")
         score = score + 1
-
-    if guess == "quit":
-        print("You have chosen to quit.")
-        exit()
 
     else:
         print("Incorrect")
