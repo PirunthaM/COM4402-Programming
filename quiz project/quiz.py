@@ -11,14 +11,14 @@ total_questions = len(quiz)
 
 print("Hello, the quiz will now begin...")
 
-def check_guess():
+def check_guess(i):
     global score
     guess = int(input("Please choose your answer between 1-4..."))
     while guess < 1 or guess > 4:
         print("invalid")
         guess = int(input("Please choose your answer between 1-4..."))
 
-    if guess == quiz[question]["answer"]:
+    if guess == quiz[i]["answer"]:
         print("Correct!")
         score = score + 1
 
@@ -27,11 +27,11 @@ def check_guess():
 
 
 def run_quiz():
-    for question in range(len(quiz)):
-        print(quiz[question]["question"])
-        for option in quiz[option]["options"]:
+    for i in range(len(quiz)):
+        print(quiz[i]["question"])
+        for option in quiz[i]["options"]:
             print(option)
-        check_guess()
+        check_guess(i)
 
 run_quiz()
 
