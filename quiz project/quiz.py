@@ -1,6 +1,3 @@
-score = 0
-total_questions = 5
-
 quiz = [
     {"question": "What is 5 + 3?", "options": ["1) 6", "2) 15", "3) 8", "4) 10"], "answer": 3},
     {"question": "What is 12 - 4?", "options": ["1) 8", "2) 6", "3) 7", "4) 5"], "answer": 1},
@@ -9,9 +6,13 @@ quiz = [
     {"question": "What is 9 + 10?", "options": ["1) 18", "2) 19", "3) 20", "4) 21"], "answer": 2}
 ]
 
+score = 0
+total_questions = len(quiz)
+
 print("Hello, the quiz will now begin...")
 
-def check_guess():
+def check_guess(quiz):
+    global score
     guess = int(input("Please choose your answer between 1-4..."))
     while guess < 1 or guess > 4:
         print("invalid")
@@ -30,7 +31,7 @@ def run_quiz():
         print(quiz[question]["question"])
         for option in quiz[question]["options"]:
             print(option)
-        check_guess(question)
+        check_guess()
 
 run_quiz()
 
