@@ -29,7 +29,7 @@ def check_guess():
 def run_quiz():
     for question in range(len(quiz)):
         print(quiz[question]["question"])
-        for option in quiz[question]["options"]:
+        for option in quiz[option]["options"]:
             print(option)
         check_guess()
 
