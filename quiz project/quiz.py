@@ -14,6 +14,7 @@ print("Hello, the quiz will now begin...")
 def check_guess(i):
     global score
     guess = int(input("Please choose your answer between 1-4..."))
+
     while guess < 1 or guess > 4:
         print("invalid")
         guess = int(input("Please choose your answer between 1-4..."))
